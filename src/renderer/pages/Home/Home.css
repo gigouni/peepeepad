@@ -1,0 +1,15 @@
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.rounded {
+  border-radius: 40%;
+}
+
+.home-content h1 {
+  font-size: 5rem;
+}
