@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/readme-app.png" width="80%" />
+  <img src="assets/readme-app.png" width="100%" />
 </div>
 
 <br>
@@ -10,8 +10,7 @@ PeePeePad, the application to know which dog sleeps upstairs tonight https://pee
 
 - [1. Install](#1-install)
 - [2. Starting Development](#2-starting-development)
-- [3. Packaging for Production](#3-packaging-for-production)
-- [4. Deploying to Firebase](#4-deploying-to-firebase)
+- [3. Packaging for Production & deploying to Firebase](#3-packaging-for-production--deploying-to-firebase)
 
 <!-- /TOC -->
 
@@ -44,15 +43,7 @@ Start the app in the `dev` environment:
 npm start
 ```
 
-## 3. Packaging for Production
-
-To package apps for the local platform:
-
-```bash
-npm run package
-```
-
-## 4. Deploying to Firebase
+## 3. Packaging for Production & deploying to Firebase
 
 ```bash
 npm run firebase:deploy
