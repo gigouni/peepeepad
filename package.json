@@ -1,6 +1,6 @@
 {
-  "name": "electron-react-boilerplate",
-  "description": "A foundation for scalable desktop apps",
+  "name": "PeePeePad",
+  "description": "The app to know which one of your dogs sleeps with you tonight",
   "keywords": [
     "electron",
     "boilerplate",
@@ -12,25 +12,24 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/electron-react-boilerplate/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/gigouni/peepeepad#readme",
   "bugs": {
-    "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
+    "url": "https://github.com/gigouni/peepeepad/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
+    "url": "git+https://github.com/gigouni/peepeepad.git"
   },
   "license": "MIT",
-  "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
-  },
-  "contributors": [
+  "authors": [
     {
-      "name": "Amila Welihinda",
-      "email": "amilajack@gmail.com",
-      "url": "https://github.com/amilajack"
+      "name": "Electron React Boilerplate Maintainers",
+      "email": "electronreactboilerplate@gmail.com",
+      "url": "https://electron-react-boilerplate.js.org"
+    },
+    {
+      "name": "Nicolas GIGOU",
+      "email": "nicolas.gigou@gmail.com"
     }
   ],
   "main": "./.erb/dll/main.bundle.dev.js",
@@ -179,7 +178,7 @@
     "webpack-merge": "^5.9.0"
   },
   "build": {
-    "productName": "ElectronReact",
+    "productName": "PeePeePad",
     "appId": "org.erb.ElectronReact",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",

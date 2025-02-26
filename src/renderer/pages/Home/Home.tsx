@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getTodayDog } from '../../../main/storage';
+import { getTodayDog } from '../../../main/localstorage/dogPerDate.storage';
 import Header from '../../components/Header/Header';
 import './Home.css';
 

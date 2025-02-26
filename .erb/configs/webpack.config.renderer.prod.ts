@@ -2,18 +2,18 @@
  * Build config for electron renderer process
  */
 
-import path from 'path';
-import webpack from 'webpack';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
-import { merge } from 'webpack-merge';
+import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
-import baseConfig from './webpack.config.base';
-import webpackPaths from './webpack.paths';
+import webpack from 'webpack';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { merge } from 'webpack-merge';
 import checkNodeEnv from '../scripts/check-node-env';
 import deleteSourceMaps from '../scripts/delete-source-maps';
+import baseConfig from './webpack.config.base';
+import webpackPaths from './webpack.paths';
 
 checkNodeEnv('production');
 deleteSourceMaps();
@@ -134,6 +134,9 @@ const configuration: webpack.Configuration = {
 
     new webpack.DefinePlugin({
       'process.type': '"renderer"',
+      'process.env.CSP_POLICY': JSON.stringify(
+        "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'none';",
+      ),
     }),
   ],
 };

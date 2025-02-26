@@ -17,3 +17,7 @@ button.burger-button:hover {
   transform: scale(1.05);
   opacity: 1;
 }
+
+button.burger-button-refresh {
+  margin-left: 1rem;
+}

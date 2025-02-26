@@ -13,6 +13,10 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+
+    // Commented out to allow console.log until I have the motivation to implement a better solution
+    // The `override` property is deprecated and has been removed in ESLint v9.0.0
+    'no-console': 'off',
   },
   parserOptions: {
     ecmaVersion: 2022,

@@ -1,6 +1,10 @@
-<img src=".erb/img/erb-banner.svg" width="100%" />
+<div align="center">
+  <img src="assets/readme-app.png" width="80%" />
+</div>
 
 <br>
+
+PeePeePad, the application to know which dog sleeps upstairs tonight https://peepeepad-fa20c.web.app/.
 
 <!-- TOC -->
 
@@ -24,6 +28,7 @@ npm install
 Create a `.env` file with
 
 ```env
+# Values can be found in https://console.firebase.google.com/u/0/project/peepeepad-fa20c/settings/serviceaccounts/databasesecrets
 FIREBASE_API_KEY=your_api_key
 FIREBASE_AUTH_DOMAIN=your_auth_domain
 FIREBASE_PROJECT_ID=your_project_id
