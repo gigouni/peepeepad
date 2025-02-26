@@ -3,9 +3,10 @@ import { get, getDatabase, ref, set } from 'firebase/database';
 import dbConstants from '../constants/db.constants';
 import dogPerDatesConstants from '../constants/dogPerDate.constants';
 import dogsConstants from '../constants/dogs.constants';
+import sensitiveDbConstants from '../constants/sensitive-db.constants';
 
 // Initialize Firebase
-const app = initializeApp(window.firebaseConfig);
+const app = initializeApp(sensitiveDbConstants.firebaseConfig);
 const database = getDatabase(app);
 
 // Function to initialize the "dogs" table with default values if it does not exist

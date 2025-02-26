@@ -1,6 +1,14 @@
 {
   "rules": {
     ".read": false,
-    ".write": false
+    ".write": false,
+    "dogs": {
+      ".read": true,
+      ".write": true
+    },
+    "dogPerDates": {
+      ".read": true,
+      ".write": true
+    }
   }
 }

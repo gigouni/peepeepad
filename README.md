@@ -24,18 +24,7 @@ npm install
 
 ## 2. Starting Development
 
-Create a `.env` file with
-
-```env
-# Values can be found in https://console.firebase.google.com/u/0/project/peepeepad-fa20c/settings/serviceaccounts/databasesecrets
-FIREBASE_API_KEY=your_api_key
-FIREBASE_AUTH_DOMAIN=your_auth_domain
-FIREBASE_PROJECT_ID=your_project_id
-FIREBASE_STORAGE_BUCKET=your_storage_bucket
-FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-FIREBASE_APP_ID=your_app_id
-FIREBASE_MEASUREMENT_ID=your_measurement_id
-```
+Complete the `src/main/constants/db.constants.ts` file with your Firebase credentials (values can be found in https://console.firebase.google.com/u/0/project/peepeepad-fa20c/settings/serviceaccounts/databasesecrets)
 
 Start the app in the `dev` environment:
 
@@ -48,3 +37,5 @@ npm start
 ```bash
 npm run firebase:deploy
 ```
+
+Then, launch https://peepeepad-fa20c.web.app/
