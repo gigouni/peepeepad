@@ -32,3 +32,6 @@ npm-debug.log.*
 
 .env
 .env.bck
+
+# Ignore any local configuration, this ensures sensitive data isn't committed
+src/main/constants/sensitive-db.constants.ts
