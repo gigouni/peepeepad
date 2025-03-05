@@ -35,3 +35,4 @@ npm-debug.log.*
 
 # Ignore any local configuration, this ensures sensitive data isn't committed
 src/main/constants/sensitive-db.constants.ts
+src/main/constants/sensitive-db.constants.ts.bck

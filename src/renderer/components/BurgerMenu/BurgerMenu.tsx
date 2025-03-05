@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import dogPerDateConstants from '../../../main/constants/dogPerDate.constants';
 import {
   getTodayDog,
   linkDogToDay,
 } from '../../../main/localstorage/dogPerDate.storage';
 import { getDogs } from '../../../main/localstorage/dogs.storage';
-import { getTodayTimestamp, getTomorrowTimestamp } from '../../../main/misc';
+import { getTodayTimestamp } from '../../../main/misc';
 import { useEvent } from '../../EventContext';
 import './BurgerMenu.css';
 
@@ -63,12 +64,20 @@ export default function BurgerMenu() {
 
     const todayDogIndex = dogs.findIndex((dog) => dog === todayDog);
 
-    // Take the next dog except if we're at the end of the list
-    const tomorrowDogIndex =
-      todayDogIndex + 1 === dogs.length ? 0 : todayDogIndex + 1;
+    const promises = [];
 
-    const tomorrowTimestamp = getTomorrowTimestamp();
-    await linkDogToDay(tomorrowTimestamp, tomorrowDogIndex);
+    for (let i = 1; i <= dogPerDateConstants.nbDogPerDatesDaysOfRefresh; i++) {
+      // Calculate the dog index for the next day
+      const nextDogIndex = (todayDogIndex + i) % dogs.length;
+
+      // Calculate the timestamp for the next day
+      const nextDayTimestamp = getTodayTimestamp() + i * 24 * 60 * 60 * 1000;
+
+      // Assign the dog to the next day
+      promises.push(linkDogToDay(nextDayTimestamp, nextDogIndex));
+    }
+
+    await Promise.all(promises);
 
     // Refresh the Calendar
     setEvent('refresh-calendar');
